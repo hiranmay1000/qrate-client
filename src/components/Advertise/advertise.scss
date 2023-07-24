@@ -1,0 +1,15 @@
+@import "../../styles/utility_color_method.scss";
+
+.ad-section {
+	.ad-card {
+		border-radius: 10px;
+		height: 150px;
+		background-color: $foreground-color-light;
+		margin-bottom: 5px;
+		justify-content: center;
+		display: flex;
+		align-items: center;
+		font-size: 13px;
+		box-shadow: 0 0 3px #000000;
+	}
+}

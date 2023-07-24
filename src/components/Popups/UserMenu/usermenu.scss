@@ -1,0 +1,52 @@
+@import "../../../styles/utility_color_method.scss";
+
+.user-menu-wrapper {
+	border-radius: 15px;
+	position: absolute;
+	top: 60px;
+	right: 10px;
+	overflow: hidden;
+	background-color: $foreground-color;
+	box-shadow: 0 0 50px $foreground-color;
+	padding: 10px;
+	z-index: 999;
+
+	.user-menu-container {
+		width: 250px;
+		display: flex;
+		flex-direction: column;
+
+		.user-menu {
+			height: 50px;
+			background-color: $midnight-blue;
+			margin: 5px;
+			border-radius: 5px;
+			cursor: pointer;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 0 25px;
+
+			a {
+				width: 100%;
+				height: 100%;
+				display: block;
+				line-height: 50px;
+				text-decoration: none;
+				color: $foreground-color;
+				display: flex;
+				align-items: center;
+
+				&:hover {
+					background-color: $foreground-color-low;
+					color: $midnight-blue;
+				}
+			}
+
+			svg {
+				margin-right: 10px;
+			}
+		}
+	}
+}

@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Poppins:ital,wght@0,300;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Poppins&display=swap");
+@import url("https://cdn.rawgit.com/mfd/f3d96ec7f0e8f034cc22ea73b3797b59/raw/856f1dbb8d807aabceb80b6d4f94b464df461b3e/gotham.css");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400&display=swap");
+
+.App {
+	font-family: "Work Sans", "Lato", sans-serif;
+	background-color: #111;
+}
+
+hr {
+	height: 1px;
+	opacity: 0.2;
+}
+
+::-webkit-scrollbar {
+	width: 15px;
+	background-color: #48576e;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #00101f;
+}

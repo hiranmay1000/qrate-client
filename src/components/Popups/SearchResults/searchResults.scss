@@ -1,0 +1,28 @@
+@import "../../../styles/utility_color_method.scss";
+
+.search-result-box {
+	width: 500px;
+	background-color: #9fc1df;
+	position: absolute;
+	border-radius: 10px;
+	left: 50%;
+	top: 0%;
+	transform: translate(-50%, 55px);
+
+	a {
+		width: 95%;
+		height: 40px;
+		background: $foreground-color-low;
+		margin: 5px auto;
+		border-radius: 5px;
+		text-decoration: none;
+		list-style: none;
+		padding: 5px 25px;
+		display: flex;
+		align-items: center;
+		color: $font-light;
+	}
+	a:hover {
+		background-color: $foreground-color-light;
+	}
+}

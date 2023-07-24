@@ -1,0 +1,9 @@
+@import "../../styles/utility_color_method.scss";
+
+.right-container {
+	width: 350px;
+	margin: 10px;
+	color: $font-light;
+	position: absolute;
+	right: 0;
+}

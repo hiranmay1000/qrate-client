@@ -1,0 +1,9 @@
+@import "../../styles/utility_color_method.scss";
+
+.left-container {
+	width: 350px;
+	margin: 5px;
+	color: $font-light;
+	font-family: "Gotham", sans-serif;
+	position: absolute;
+}

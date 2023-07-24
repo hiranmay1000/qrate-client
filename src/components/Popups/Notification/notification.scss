@@ -1,0 +1,49 @@
+@import "../../../styles/utility_color_method.scss";
+
+.notification-wrapper {
+	border-radius: 10px;
+
+	background-color: $foreground-color;
+
+	position: absolute;
+	top: 55px;
+	right: 150px;
+
+	padding: 15px;
+
+	font-size: 14px;
+	color: $font-light;
+
+	box-shadow: 0 0 50px #111;
+
+	.notification {
+		width: 300px;
+		max-height: 300px;
+		overflow: scroll;
+
+		// Hide the scrollbar thumb
+		&::-webkit-scrollbar {
+			width: 5px;
+			background-color: transparent;
+		}
+
+		&::-webkit-scrollbar-track {
+			background-color: transparent;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background-color: $midnight-blue-light;
+		}
+
+		.notification-text-item {
+			min-height: 25px;
+			// background-color: $foreground-color-light;
+			border-bottom: 1px solid $midnight-blue-low;
+			// border-radius: 5px;
+
+			p {
+				// padding: 10px;
+			}
+		}
+	}
+}

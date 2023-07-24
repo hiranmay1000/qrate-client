@@ -1,0 +1,132 @@
+@import "../../../styles/utility_color_method.scss";
+
+.user-information-top {
+	background-color: $foreground-color;
+	font-size: 15px;
+	box-shadow: 0 0 3px #111;
+	border-radius: 5px;
+	overflow: hidden;
+
+	.user-profile {
+		.user-cover-photo {
+			height: 150px;
+			width: 100%;
+			background-color: aliceblue;
+
+			img {
+				width: 100%;
+				height: 150px;
+				object-fit: cover;
+			}
+		}
+
+		.user-profile-photo-section {
+			display: flex;
+			justify-content: space-between;
+			padding: 0 15px;
+
+			.user-photo-box {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin-top: -35px;
+
+				.user-profile-photo {
+					height: 70px;
+					width: 70px;
+					border-radius: 50%;
+					margin-top: -20px;
+				}
+
+				div {
+					padding-top: 10px;
+					padding-left: 10px;
+
+					h4,
+					p {
+						margin: 0;
+					}
+					p {
+						font-size: 12px;
+					}
+				}
+			}
+
+			.edit-profile {
+				background-color: $foreground-color-low;
+				margin: 20px 0;
+				border-radius: 5px;
+
+				.edit-profile-icon {
+					cursor: pointer;
+					display: block;
+				}
+
+				.edit-profile-icon:hover {
+					opacity: 0.7;
+				}
+			}
+		}
+
+		.user-bio {
+			text-align: center;
+
+			p {
+				padding: 0 15px;
+			}
+
+			form {
+				display: flex;
+				flex-direction: column;
+
+				margin: 0 10px;
+
+				textarea {
+					border: none;
+					border-radius: 5px;
+					margin-bottom: 5px;
+					outline: none;
+					padding: 10px;
+					font-family: cursive;
+				}
+
+				button {
+					border: none;
+					background-color: $midnight-blue;
+					color: $font-dark;
+					border-radius: 5px;
+					height: 30px;
+					cursor: pointer;
+				}
+
+				button:hover {
+					background-color: $midnight-blue-light;
+				}
+			}
+		}
+
+		.user-details {
+			padding: 0 15px;
+		}
+
+		.edit-profile-btn {
+			height: 30px;
+			background: $midnight-blue;
+			border-radius: 5px;
+			margin: 5px 10px;
+			overflow: hidden;
+
+			a {
+				color: $font-dark;
+				display: block;
+				text-decoration: none;
+				text-align: center;
+				line-height: 30px;
+			}
+
+			a:hover {
+				background-color: $midnight-blue-light;
+			}
+		}
+	}
+}

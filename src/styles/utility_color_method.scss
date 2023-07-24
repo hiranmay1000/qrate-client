@@ -1,0 +1,77 @@
+// COLOR SECTION__________________________
+// FOREGROUND COLORS
+$foreground-color: #303030;
+$foreground-color-light: #d6dfe0;
+$foreground-color-low: #81818196;
+
+//  COLORS
+$midnight-blue: #9fc1df;
+$midnight-blue-light: #cae2f2;
+$midnight-blue-low: #003c64ad;
+
+$fire-engine-red: #ff3a3f;
+
+// FONT COLORS FOR DARK MODE
+$font-light: #fff;
+$font-dark: #111;
+
+// FONT COLORS FOR LIGHT MODE
+
+// METHOD SECTION__________________________
+// INPUT FIELD STYLE
+@mixin inputStyle() {
+	width: 90%;
+	height: 40px;
+	margin: 5px 0;
+	outline: none;
+	border: none;
+	padding: 0 18px;
+	border-radius: 5px;
+	background-color: $midnight-blue-light;
+}
+
+// &HOVER
+@mixin inputHoverEffect {
+	background: none;
+	border: 2px solid $midnight-blue-light;
+	color: $midnight-blue-light;
+	transform: scale(1.02);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: 0.05s ease-in;
+}
+
+// BUTTON STYLE
+@mixin authButtonStyle {
+	width: 160px;
+	height: 40px;
+	border: none;
+	margin-top: 20px;
+	border-radius: 25px;
+	font-size: 18px;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	p {
+		margin-right: 2px;
+	}
+}
+
+// &HOVER
+@mixin authBtnHoverEffect {
+	background: none;
+	border: 2px solid $midnight-blue-light;
+	color: $midnight-blue-light;
+	transform: scale(1.1);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: 0.05s ease-in;
+
+	&:active {
+		background-color: $foreground-color-light;
+	}
+}

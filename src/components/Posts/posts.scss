@@ -1,0 +1,129 @@
+@import "../../styles/utility_color_method.scss";
+
+.main-feed {
+	padding: 10px;
+	border-radius: 5px;
+	box-shadow: 0 0 3px #000000;
+	background-color: $foreground-color;
+	margin-bottom: 10px;
+
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 16px;
+
+	.main-feed-post {
+		.post-profile-top {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+			padding: 0 5px;
+			font-family: "Poppins", sans-serif, Arial, Helvetica;
+
+			.post-user {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+
+				img {
+					width: 50px;
+					height: 50px;
+					border-radius: 50%;
+				}
+				h5 {
+					padding: 0 10px;
+				}
+			}
+		}
+		.post-bio {
+			p {
+				font-family: "Gotham", "Work sans", sans-serif;
+				text-align: left;
+				padding: 0 15px;
+			}
+		}
+
+		.post-img {
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+
+		.post-user-bottom {
+			.post-interaction-btns {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-around;
+				align-items: center;
+				padding: 0 15px;
+				text-align: center;
+
+				.like-btn {
+					width: 30%;
+					display: flex;
+					flex-direction: row;
+					justify-content: center;
+					align-items: center;
+
+					.rating {
+						cursor: pointer;
+						img {
+							width: 15px;
+							margin-right: 4px;
+						}
+					}
+
+					.rating:hover {
+						img {
+							width: 18px;
+						}
+					}
+					.average-rating {
+						padding-left: 10px;
+					}
+					.average-rating p {
+						width: 35px;
+						height: 20px;
+						position: relative;
+						background-color: $foreground-color;
+						border-radius: 4px;
+						font-size: 13px;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+					}
+				}
+
+				.comment-btn {
+					width: 30%;
+				}
+
+				.share-btn {
+					width: 30%;
+				}
+			}
+			form {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-evenly;
+				textarea {
+					width: 80%;
+					height: 36px;
+					border-radius: 10px;
+					outline: none;
+					border: none;
+					background-color: $foreground-color;
+					padding: 8px 18px;
+					font-family: cursive;
+					display: flex;
+					align-items: center;
+				}
+				button {
+					width: 15%;
+					height: 35px;
+				}
+			}
+		}
+	}
+}

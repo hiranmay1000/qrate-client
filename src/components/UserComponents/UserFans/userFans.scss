@@ -1,0 +1,24 @@
+@import "../../../styles/utility_color_method.scss";
+
+.user-fans-bottom {
+	// max-height: 390px;
+	margin-top: 25px;
+	background-color: $foreground-color;
+	font-size: 14px;
+	box-shadow: 0 0 3px #111;
+	border-radius: 10px;
+	overflow: hidden;
+	padding: 15px;
+
+	.user-fans-heading {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.all-fans-container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+}

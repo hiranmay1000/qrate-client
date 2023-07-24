@@ -1,0 +1,97 @@
+@import "../../styles/utility_color_method.scss";
+
+.coming-soon-wrapper {
+	margin: 0;
+	background-color: #000;
+
+	.coming-soon-container {
+		width: 100%;
+		height: 100vh;
+		background-image: url("../../images/image/coming-soon-black-with-spotlight.jpg");
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		animation: flicker 6s infinite;
+	}
+}
+@keyframes flicker {
+	0% {
+		opacity: 1;
+	}
+	2% {
+		opacity: 0;
+	}
+
+	4% {
+		opacity: 0.9;
+	}
+	5% {
+		opacity: 0.3;
+	}
+
+	9% {
+		opacity: 1;
+	}
+
+	12% {
+		opacity: 0;
+	}
+	13% {
+		opacity: 1;
+	}
+	18% {
+		opacity: 1;
+	}
+	19% {
+		opacity: 0;
+	}
+	30% {
+		opacity: 0;
+	}
+	31% {
+		opacity: 1;
+	}
+	40% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 1;
+	}
+
+	51% {
+		opacity: 0.5;
+	}
+	52% {
+		opacity: 1;
+	}
+	53% {
+		opacity: 0.7;
+	}
+
+	55% {
+		opacity: 1;
+	}
+	89% {
+		opacity: 1;
+	}
+
+	90% {
+		opacity: 0;
+	}
+	91% {
+		opacity: 0.9;
+	}
+	94% {
+		opacity: 0.5;
+	}
+	95% {
+		opacity: 0.8;
+	}
+	98% {
+		opacity: 0.3;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}

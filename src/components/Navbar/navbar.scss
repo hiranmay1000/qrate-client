@@ -1,0 +1,92 @@
+@import "../../styles/utility_color_method.scss";
+
+.navbar-main {
+	background-color: $foreground-color;
+	height: 50px;
+	width: 100%;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+
+	box-shadow: 0 0 5px #111;
+	z-index: 1;
+	position: relative;
+	color: $font-light;
+
+	.left-start-part {
+		width: 250px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.logo-brand a {
+			text-decoration: none;
+			margin: 0;
+			color: $midnight-blue;
+			color: $fire-engine-red;
+		}
+	}
+
+	.search-box-top {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+
+		img {
+			width: 21px;
+			height: 21px;
+			position: absolute;
+			margin-left: 7px;
+		}
+
+		input {
+			height: 27px;
+			width: 450px;
+			border-radius: 10px;
+			outline: none;
+			border: none;
+			padding: 0 25px;
+			padding-left: 35px;
+			background-color: $midnight-blue-light;
+		}
+	}
+
+	.right-end-part {
+		width: 250px;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-around;
+
+		.nav-icon {
+			cursor: pointer;
+
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+
+		.user-profile-avatar {
+			.user-profile-avatar-username {
+				text-decoration: none;
+				color: $font-light;
+				display: block;
+				cursor: pointer;
+
+				h5 {
+					height: 30px;
+					background-color: $midnight-blue-low;
+					padding: 15px;
+					border-radius: 3px;
+					display: flex;
+					align-items: center;
+				}
+				h5:hover {
+					background-color: $foreground-color-low;
+				}
+			}
+		}
+	}
+}
