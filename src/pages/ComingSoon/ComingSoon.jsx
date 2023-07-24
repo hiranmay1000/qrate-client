@@ -17,7 +17,7 @@ export default function ComingSoon() {
 		<div className="coming-soon-wrapper">
 			<div className="coming-soon-container moveBody">
 				<div className="brand-container">
-					<h3>RATERA</h3>
+					<h3 style={{ color: "#181818" }}>RATERA</h3>
 				</div>
 			</div>
 		</div>
