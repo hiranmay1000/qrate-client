@@ -1,1 +1,62 @@
 @import "../../styles/utility_color_method.scss";
+
+.error-wrapper {
+	width: 100%;
+	height: 100vh;
+	background-color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	.error-container {
+		width: 750px;
+		height: 450px;
+		background-color: $foreground-color;
+		padding: 25px;
+		color: #dedede;
+		border-radius: 15px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		box-shadow: 0 0 50px #111;
+
+		.error-message {
+			font-size: 20px;
+			text-align: center;
+			margin-bottom: 20px;
+			margin-top: 20px;
+			line-height: 20px;
+			letter-spacing: 1px;
+			width: 70%;
+			border-right: 1px solid #fff;
+
+			svg {
+				width: 50px;
+				height: 50px;
+			}
+		}
+
+		.authentication-btns {
+			display: flex;
+			align-items: center;
+			flex-direction: row;
+			justify-content: center;
+			margin-left: 10px;
+
+			a {
+				margin: 0 7px;
+				text-decoration: none;
+				@include authButtonStyle();
+				background-color: #000;
+				color: $midnight-blue;
+				box-shadow: 0 0 3px #000;
+				transition: 0.1s ease-out;
+
+				&:hover {
+					box-shadow: 0 0 25px #000;
+					@include authBtnHoverEffect();
+				}
+			}
+		}
+	}
+}

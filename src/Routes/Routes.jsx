@@ -25,7 +25,7 @@ export default function ParkRoutes() {
 					<Route path="/login" element={user ? <Home /> : <Login />} />
 					<Route path="/:username" element={<Profile />} />
 					<Route path="/fans" element={<Friend />} />*/}
-					{/* <Route path="*" element={<ErrorPage />} /> */}
+					<Route path="*" element={<ErrorPage />} />
 					<Route path="/" element={<ComingSoon />} />
 				</Routes>
 			</Router>

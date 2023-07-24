@@ -72,6 +72,7 @@ $font-dark: #111;
 	transition: 0.05s ease-in;
 
 	&:active {
+		color: #004e64;
 		background-color: $foreground-color-light;
 	}
 }
