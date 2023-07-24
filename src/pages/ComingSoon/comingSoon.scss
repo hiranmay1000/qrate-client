@@ -12,6 +12,21 @@
 		background-size: contain;
 		background-position: center;
 		animation: flicker 6s infinite;
+
+		.brand-container {
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, 400%);
+
+			h3 {
+				font-family: Verdana, Geneva, Tahoma, sans-serif;
+				font-size: 56px;
+				color: #252525;
+				margin: 0;
+				transform: rotate(-4deg);
+			}
+		}
 	}
 }
 @keyframes flicker {

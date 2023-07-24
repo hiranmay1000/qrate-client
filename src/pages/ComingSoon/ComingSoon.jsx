@@ -15,7 +15,11 @@ export default function ComingSoon() {
 
 	return (
 		<div className="coming-soon-wrapper">
-			<div className="coming-soon-container moveBody"></div>
+			<div className="coming-soon-container moveBody">
+				<div className="brand-container">
+					<h3>RATERA</h3>
+				</div>
+			</div>
 		</div>
 	);
 }
