@@ -4,7 +4,7 @@
 	padding: 10px;
 	border-radius: 5px;
 	box-shadow: 0 0 3px #000000;
-	background-color: $foreground-color;
+	background-color: $richBlack;
 	margin-bottom: 10px;
 
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -38,11 +38,14 @@
 			p {
 				font-family: "Gotham", "Work sans", sans-serif;
 				text-align: left;
-				padding: 0 15px;
+				padding: 15px 5px;
+				border-bottom: 0.5px solid $dimText;
 			}
 		}
 
 		.post-img {
+			padding-bottom: 10px;
+			border-bottom: 0.5px solid $dimText;
 			img {
 				width: 100%;
 				height: 100%;
@@ -51,6 +54,14 @@
 		}
 
 		.post-user-bottom {
+			.post-interaction-data {
+				// height: 25px;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: space-between;
+				padding: 0 5px;
+			}
 			.post-interaction-btns {
 				display: flex;
 				flex-direction: row;
@@ -58,6 +69,8 @@
 				align-items: center;
 				padding: 0 15px;
 				text-align: center;
+				border-bottom: 0.5px solid $dimText;
+				margin-bottom: 10px;
 
 				.like-btn {
 					width: 30%;
@@ -86,7 +99,7 @@
 						width: 35px;
 						height: 20px;
 						position: relative;
-						background-color: $foreground-color;
+						background-color: $richBlack;
 						border-radius: 4px;
 						font-size: 13px;
 						display: flex;
@@ -107,21 +120,36 @@
 				display: flex;
 				flex-direction: row;
 				justify-content: space-evenly;
+				padding: 10px 25px;
+
+				// comment box
 				textarea {
-					width: 80%;
-					height: 36px;
+					width: 100%;
+					height: 35px;
+					min-height: 32px; /* Set a minimum height to prevent it from becoming too small */
+					max-height: 100px; /* Set a minimum height to prevent it from becoming too small */
 					border-radius: 10px;
 					outline: none;
 					border: none;
-					background-color: $foreground-color;
+					background-color: $periPurple;
 					padding: 8px 18px;
 					font-family: cursive;
 					display: flex;
 					align-items: center;
+					overflow: hidden;
 				}
 				button {
-					width: 15%;
+					@include authButtonStyle();
+					width: 120px;
 					height: 35px;
+					font-size: 15px;
+					margin: 0;
+					border-radius: 7px;
+					margin-left: 7px;
+
+					&:hover {
+						@include authBtnHoverEffect();
+					}
 				}
 			}
 		}

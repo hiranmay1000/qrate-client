@@ -1,8 +1,6 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { GoDotFill } from "react-icons/go";
-
-import { AuthContext } from "../../Contexts/AuthContext";
 
 import "../../components/Navbar/navbar.scss";
 import UserMenu from "../Popups/UserMenu/UserMenu";
@@ -60,16 +58,6 @@ export default function Navbar() {
 		setAlertNewNotification(false);
 	}
 
-	const [loggedUser, setLoggedUser] = useState([]);
-
-	const { user } = useContext(AuthContext);
-	useEffect(() => {
-		if (user) {
-			setLoggedUser(user);
-			console.log(user?.token?.username);
-		}
-	}, [user]);
-
 	return (
 		<>
 			<div className="navbar-main">
@@ -118,19 +106,19 @@ export default function Navbar() {
 					</div>
 					<div className="nav-icon user-profile-avatar">
 						<div className="user-profile-avatar-username" onClick={handleShowUserMenu}>
-							<h5>{loggedUser?.token?.username}</h5>
+							<h5>{"username"}</h5>
 						</div>
 						{isVisibleMenu && [
 							<FadeBackground
-								key={"user-menu"}
+								key={"user-menu1"}
 								bgColor="transparent"
 								handleDisableModal={handleDisableModal}
 							/>,
-							<UserMenu key={"user-menu"} />,
+							<UserMenu key={"user-menu2"} />,
 						]}
 					</div>
 					{isVisibleNotification && [
-						<FadeBackground key={"user-menu"} bgColor="transparent" handleDisableModal={handleDisableModal} />,
+						<FadeBackground key={"user-menu3"} bgColor="transparent" handleDisableModal={handleDisableModal} />,
 						<Notification key={"user-notification"} />,
 					]}
 				</div>

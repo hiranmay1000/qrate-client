@@ -7,16 +7,10 @@ const api_url = process.env.REACT_APP_API_URL;
 export const loginCalls = async (userCredentials, dispatch) => {
 	dispatch({ type: "LOGIN_START" });
 	try {
-		const config = {
-			headers: {
-				"Content-Type": "application/json",
-			},
-			withCredentials: true,
-		};
-
-		const res = await axios.post(`${api_url}/auth/login`, userCredentials, { config });
+		const res = await axios.post(`${api_url}/auth/login`, userCredentials, { withCredentials: true });
 
 		if (res?.status === 200) {
+			localStorage.setItem("token", res.data.token);
 			dispatch({ type: "LOGIN_SUCCESS", payload: res.data }); // dispatch to the authReducer
 			toast.success(res.data.msg);
 		}

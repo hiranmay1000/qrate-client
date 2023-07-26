@@ -17,13 +17,15 @@ export default function Login() {
 	const [activeErrField, setActiveErrField] = useState("");
 	const [isHidden, setIsHidden] = useState(false);
 
-	const { isFetching, dispatch } = useContext(AuthContext);
+	const { user, isFetching, dispatch } = useContext(AuthContext);
 
 	const navigate = useNavigate();
 
 	const handleLogin = async (e) => {
 		e.preventDefault();
-		loginCalls({ username, password }, dispatch);
+		if (user === null) {
+			loginCalls({ username, password }, dispatch);
+		}
 	};
 
 	const handleSignupBtn = () => {

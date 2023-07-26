@@ -47,5 +47,8 @@
             "last 1 safari version"
         ]
     },
-    "proxy": "http://localhost:8080/api"
+    "proxy": "http://localhost:8080/api",
+    "devDependencies": {
+        "typescript": "^5.1.6"
+    }
 }

@@ -17,9 +17,7 @@ export default function MiddlePostContainer() {
 	const [showForm, setShowForm] = useState(false);
 
 	const { user } = useContext(AuthContext);
-	// console.log(user.username);
 
-	// const userData = user;
 	const handleReadOnlyInpBar = () => {
 		setShowForm(true);
 	};

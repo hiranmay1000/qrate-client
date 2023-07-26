@@ -1,3 +1,6 @@
 {
-    "cSpell.words": ["signup", "toastify", "usermenu"]
+	"cSpell.words": ["signup", "toastify", "usermenu"],
+	"editor.semanticTokenColorCustomizations": {},
+	"terminal.integrated.automationProfile.linux": {},
+	"terminal.integrated.defaultProfile.linux": ""
 }

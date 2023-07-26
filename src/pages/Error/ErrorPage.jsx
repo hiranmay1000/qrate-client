@@ -1,6 +1,6 @@
 import React from "react";
 import { TbError404 } from "react-icons/tb";
-import { BiSolidError, BiSolidErrorAlt, BiSolidErrorCircle } from "react-icons/bi";
+import { BiSolidError } from "react-icons/bi";
 
 import "./errorPage.scss";
 import { Link } from "react-router-dom";
