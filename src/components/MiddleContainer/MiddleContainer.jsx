@@ -10,16 +10,12 @@ import CreatePostText from "../Popups/CreatePost/CreatePostText";
 import Posts from "../Posts/Posts";
 import LeftContainer from "../LeftContainer/LeftContainer";
 import RightContainer from "../RightContainer/RightContainer";
-import { AuthContext } from "../../Contexts/AuthContext";
 
 export default function MiddlePostContainer() {
 	const [posts, setPosts] = useState([]);
 	const [showForm, setShowForm] = useState(false);
+	const user = "" // temp
 
-	const { user } = useContext(AuthContext);
-	// console.log(user.username);
-
-	// const userData = user;
 	const handleReadOnlyInpBar = () => {
 		setShowForm(true);
 	};

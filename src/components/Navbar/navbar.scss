@@ -1,7 +1,7 @@
 @import "../../styles/utility_color_method.scss";
 
 .navbar-main {
-	background-color: $foreground-color;
+	background-color: $light01;
 	height: 50px;
 	width: 100%;
 
@@ -12,8 +12,7 @@
 
 	box-shadow: 0 0 5px #111;
 	z-index: 1;
-	position: relative;
-	color: $font-light;
+	position: absolute;
 
 	.left-start-part {
 		width: 250px;
@@ -22,10 +21,13 @@
 		justify-content: center;
 
 		.logo-brand a {
+			font-family: sans-serif;
+			margin-left: -100px;
+			padding: 0 50px;
+			display: block;
+			line-height: 50px;
 			text-decoration: none;
-			margin: 0;
-			color: $midnight-blue;
-			color: $fire-engine-red;
+			color: $brand-color;
 		}
 	}
 
@@ -35,21 +37,23 @@
 		align-items: center;
 
 		img {
-			width: 21px;
-			height: 21px;
+			width: 19px;
+			height: 19px;
 			position: absolute;
-			margin-left: 7px;
+			margin-left: 10px;
 		}
 
 		input {
 			height: 27px;
-			width: 450px;
-			border-radius: 10px;
+			width: 400px;
+			border-radius: 50px;
+			font-size: 13px;
 			outline: none;
 			border: none;
 			padding: 0 25px;
 			padding-left: 35px;
-			background-color: $midnight-blue-light;
+			border: 2px solid $dark01;
+			color: $dark02;
 		}
 	}
 
@@ -69,16 +73,16 @@
 		}
 
 		.user-profile-avatar {
+			margin-right: 30px;
 			.user-profile-avatar-username {
 				text-decoration: none;
-				color: $font-light;
+				color: $font-color;
 				display: block;
 				cursor: pointer;
 
 				h5 {
-					height: 30px;
-					background-color: $midnight-blue-low;
-					padding: 15px;
+					background-color: $dark02;
+					padding: 10px;
 					border-radius: 3px;
 					display: flex;
 					align-items: center;

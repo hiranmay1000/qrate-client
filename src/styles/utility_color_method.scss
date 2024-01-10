@@ -1,23 +1,75 @@
-// COLOR SECTION__________________________
+//_______________________DEFAULT________________________
+
 // FOREGROUND COLORS
-$foreground-color: #303030;
-$foreground-color-light: #d6dfe0;
+$foreground-color: #dddddd;
 $foreground-color-low: #81818196;
+$foreground-color-light: #d6dfe0;
 
 //  COLORS
 $midnight-blue: #9fc1df;
 $midnight-blue-light: #cae2f2;
-$midnight-blue-low: #003c64ad;
+$midnight-blue-low: #1a2930;
+$midnight-blue-dark: #1a2930;
 
-$fire-engine-red: #ff3a3f;
+$fire-engine-red: #b85043;
 
 // FONT COLORS FOR DARK MODE
-$font-light: #fff;
+$font-light: #111;
 $font-dark: #111;
 
-// FONT COLORS FOR LIGHT MODE
+// new shades
+$light01: #dae2e6;
+$light02: #c2cacd;
+$light03: #afbabf;
 
-// METHOD SECTION__________________________
+$dark01: #c2c9cd;
+$dark02: #9dabb2;
+$dark03: #1a2930;
+
+$font-color: #111;
+
+$brand-color: #f55d50;
+
+//_______________________DARK________________________
+.dark-mode {
+	background-color: #425368;
+	a,
+	p,
+	div {
+		color: #fff;
+	}
+
+	.main-feed,
+	.side-menu-wrapper,
+	.user-fans-bottom,
+	.friend-suggestion,
+	.navbar-main,
+	.user-fans-bottom {
+		transition: 0.3s ease-in-out;
+		background-color: #1a2930;
+	}
+
+	.side-menu-wrapper {
+		.side-menu-item:hover {
+			border-left: 2px solid $midnight-blue;
+		}
+
+		.side-bar-ui-theme {
+			button {
+				svg {
+					color: #fff;
+				}
+			}
+		}
+
+		.side-menu-container {
+			a {
+				color: #fff;
+			}
+		}
+	}
+}
+
 // INPUT FIELD STYLE
 @mixin inputStyle() {
 	width: 90%;
@@ -27,14 +79,14 @@ $font-dark: #111;
 	border: none;
 	padding: 0 18px;
 	border-radius: 5px;
-	background-color: $midnight-blue-light;
+	color: $midnight-blue-low;
 }
 
 // &HOVER
 @mixin inputHoverEffect {
 	background: none;
-	border: 2px solid $midnight-blue-light;
-	color: $midnight-blue-light;
+	border: 2px solid $midnight-blue-low;
+	color: $midnight-blue-low;
 	transform: scale(1.02);
 	display: flex;
 	align-items: center;
@@ -54,6 +106,7 @@ $font-dark: #111;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background-color: $midnight-blue-light;
 
 	p {
 		margin-right: 2px;
@@ -63,8 +116,8 @@ $font-dark: #111;
 // &HOVER
 @mixin authBtnHoverEffect {
 	background: none;
-	border: 2px solid $midnight-blue-light;
-	color: $midnight-blue-light;
+	border: 2px solid $midnight-blue-low;
+	color: $midnight-blue-low;
 	transform: scale(1.1);
 	display: flex;
 	align-items: center;

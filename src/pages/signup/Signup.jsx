@@ -133,9 +133,9 @@ const Signup = () => {
           </div>
           <div className="signup-img-banner">
             <div className="signup-img-banner-wrapper">
-              <h2>Already a Ratera user?</h2>
+              <h2>Already Qrate user?</h2>
               <p>
-                Welcome to Ratera community <br /> Happy rating
+                Don't worry you'll be anonymous to others
               </p>
               <button onClick={handleRedirectLoginBtn} type="button">
                 Login <HiChevronDoubleRight />

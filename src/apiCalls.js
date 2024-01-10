@@ -4,8 +4,7 @@ import { toast } from "react-toastify";
 const api_url = process.env.REACT_APP_API_URL;
 
 // LOGIN CALL
-export const loginCalls = async (userCredentials, dispatch) => {
-	dispatch({ type: "LOGIN_START" });
+export const loginCalls = async (userCredentials) => {
 	try {
 		const config = {
 			headers: {
@@ -17,11 +16,14 @@ export const loginCalls = async (userCredentials, dispatch) => {
 		const res = await axios.post(`${api_url}/auth/login`, userCredentials, { config });
 
 		if (res?.status === 200) {
-			dispatch({ type: "LOGIN_SUCCESS", payload: res.data }); // dispatch to the authReducer
+			const token = res.data.token;
+			localStorage.setItem("token", token);
+			// login(); // Notify AuthContext about the successful login
 			toast.success(res.data.msg);
 		}
 	} catch (error) {
-		dispatch({ type: "LOGIN_FAILURE", payload: error?.response?.data?.msg });
 		toast.error(error?.response?.data?.msg);
 	}
 };
+
+export default loginCalls;

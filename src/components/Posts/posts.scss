@@ -4,7 +4,7 @@
 	padding: 10px;
 	border-radius: 5px;
 	box-shadow: 0 0 3px #000000;
-	background-color: $foreground-color;
+	// background-color: $light01;
 	margin-bottom: 10px;
 
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -36,9 +36,10 @@
 		}
 		.post-bio {
 			p {
-				font-family: "Gotham", "Work sans", sans-serif;
+				font-family: sans-serif, Arial, Helvetica;
 				text-align: left;
 				padding: 0 15px;
+				font-size: 13px;
 			}
 		}
 
@@ -86,7 +87,7 @@
 						width: 35px;
 						height: 20px;
 						position: relative;
-						background-color: $foreground-color;
+						background-color: $dark02;
 						border-radius: 4px;
 						font-size: 13px;
 						display: flex;

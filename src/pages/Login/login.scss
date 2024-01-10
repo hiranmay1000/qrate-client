@@ -35,7 +35,7 @@
 
 			h2 {
 				font-size: 35px;
-				color: #fff;
+				color: $midnight-blue-low;
 			}
 
 			input {
@@ -43,7 +43,7 @@
 			}
 
 			.login-input.active {
-				border: 2px solid red;
+				border: 2px solid $fire-engine-red;
 			}
 
 			input:focus {
@@ -59,7 +59,7 @@
 			}
 			.login-forgot-password {
 				a {
-					color: $midnight-blue;
+					color: $midnight-blue-low;
 					text-decoration: none;
 					font-size: 13px;
 					margin-top: 40px;

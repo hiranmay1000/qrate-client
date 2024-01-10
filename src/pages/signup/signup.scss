@@ -17,7 +17,7 @@
 
 	border-radius: 15px;
 	box-shadow: 0 0px 10px #111;
-	background: $foreground-color;
+	background: #c9cdd3;
 	overflow: hidden;
 
 	transition: 0.17s ease-in;
@@ -38,8 +38,7 @@
 			width: 70%;
 
 			h2 {
-				font-size: 28px;
-				color: #fff;
+				color: $midnight-blue-low;
 			}
 
 			input {

@@ -5,18 +5,14 @@ import { ToastContainer, toast } from "react-toastify";
 import "./userMayKnow.scss";
 
 import profileImage from "../../../images/image/user-photo-temp.jpg";
-import { AuthContext } from "../../../Contexts/AuthContext";
 
 const api_url = process.env.REACT_APP_API_URL;
 const FOLLOW_STORAGE_KEY = "followedUsers";
 
 export default function UserMayKnow() {
 	const [userData, setUserData] = useState([]);
-	const { user } = useContext(AuthContext);
-	const loggedUser = user;
-	console.log(loggedUser);
-
-	const followedUsers = JSON.parse(localStorage.getItem(FOLLOW_STORAGE_KEY)) || [];
+	const followedUsers = [] || [];
+	const loggedUser = "";
 
 	const handleFollowBtn = async (userToFollow) => {
 		try {

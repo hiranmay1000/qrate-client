@@ -21,13 +21,15 @@
 
 			h3 {
 				font-family: Verdana, Geneva, Tahoma, sans-serif;
-				font-size: 50px;
+				font-size: 45px;
 				margin: 0;
 				transform: rotate(-4deg);
+				color: #393939 !important;
 			}
 		}
 	}
 }
+
 @keyframes flicker {
 	0% {
 		opacity: 1;

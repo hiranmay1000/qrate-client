@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import bulbFlickeringNoiseFile from "../../Audio/fluorescent-lamp-flickering-fit0ne.mp3";
+import bulbFlickeringNoiseFile from "../../Assets/Audio/fluorescent-lamp-flickering-fit0ne.mp3";
 
 import "./comingSoon.scss";
 
@@ -17,7 +17,7 @@ export default function ComingSoon() {
 		<div className="coming-soon-wrapper">
 			<div className="coming-soon-container moveBody">
 				<div className="brand-container">
-					<h3 style={{ color: "#181818" }}>RATERA</h3>
+					<h3>QRATE</h3>
 				</div>
 			</div>
 		</div>

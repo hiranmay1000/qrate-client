@@ -1,38 +1,32 @@
-import React, { useContext, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { CircularProgress } from "@mui/material";
 
 import { ToastContainer } from "react-toastify";
 import { HiChevronDoubleLeft } from "react-icons/hi";
 import { PiSignInBold } from "react-icons/pi";
+import loginCalls from "../../apiCalls";
 
 import "./login.scss";
-import { AuthContext } from "../../Contexts/AuthContext";
-import { loginCalls } from "../../apiCalls";
+import { useAuth } from "../../context/AuthContext";
 
 export default function Login() {
 	const [username, setUsername] = useState("");
 	const [password, setPassword] = useState("");
-
 	const [activeErrField, setActiveErrField] = useState("");
 	const [isHidden, setIsHidden] = useState(false);
-
-	const { isFetching, dispatch } = useContext(AuthContext);
-
-	const navigate = useNavigate();
+	const { login } = useAuth();
 
 	const handleLogin = async (e) => {
 		e.preventDefault();
-		loginCalls({ username, password }, dispatch);
+
+		login({
+			username,
+			password,
+		});
 	};
 
-	const handleSignupBtn = () => {
-		setIsHidden(true);
-		setTimeout(() => {
-			setIsHidden(false);
-			navigate("/signup");
-		}, 170);
-	};
+	const handleSignupBtn = () => {};
 
 	const handleResetPasswordModal = () => {};
 	return (
@@ -77,7 +71,7 @@ export default function Login() {
 							placeholder="password"
 						/>
 						<button type="submit">
-							{isFetching ? (
+							{false ? (
 								<CircularProgress color="inherit" size="20px" />
 							) : (
 								<>

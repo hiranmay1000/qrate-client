@@ -2,13 +2,13 @@ import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { GoDotFill } from "react-icons/go";
 
-import { AuthContext } from "../../Contexts/AuthContext";
-
 import "../../components/Navbar/navbar.scss";
 import UserMenu from "../Popups/UserMenu/UserMenu";
 import FadeBackground from "../Popups/FadeBackground/FadeBackground";
 import SearchResults from "../Popups/SearchResults/SearchResults";
 import Notification from "../Popups/Notification/Notification";
+import { toast } from "react-toastify";
+import { useAuth } from "../../context/AuthContext";
 
 export default function Navbar() {
 	let [searchUsers, setSearchUsers] = useState("");
@@ -16,6 +16,7 @@ export default function Navbar() {
 	const [isVisibleMenu, setVisibleMenu] = useState(false);
 	const [isVisibleNotification, setVisibleNotification] = useState(false);
 	const [isAlertNewNotification, setAlertNewNotification] = useState(false);
+	const { decodedToken } = useAuth();
 
 	const handleSearchUsers = (e) => {
 		setSearchUsers(e.target.value);
@@ -60,23 +61,18 @@ export default function Navbar() {
 		setAlertNewNotification(false);
 	}
 
-	const [loggedUser, setLoggedUser] = useState([]);
-
-	const { user } = useContext(AuthContext);
-	useEffect(() => {
-		if (user) {
-			setLoggedUser(user);
-			console.log(user?.token?.username);
-		}
-	}, [user]);
+	const handleLogout = () => {
+		localStorage.removeItem("token");
+		toast.warning("Logout successfully");
+	};
 
 	return (
 		<>
 			<div className="navbar-main">
 				<div className="left-start-part">
-					<h2 className="logo-brand">
-						<Link to={"/"}>Ratera</Link>
-					</h2>
+					<h3 className="logo-brand">
+						<Link to={"/"}>QRATE</Link>
+					</h3>
 				</div>
 				<div className="mid-part">
 					<div className="search-box-top">
@@ -96,6 +92,11 @@ export default function Navbar() {
 					)}
 				</div>
 				<div className="right-end-part">
+					<div className="logout-btn">
+						<button type="button" onClick={handleLogout}>
+							Logout
+						</button>
+					</div>
 					<div className="nav-icon  bell-icon-navbar">
 						<img
 							onClick={handleShowNotification}
@@ -118,7 +119,7 @@ export default function Navbar() {
 					</div>
 					<div className="nav-icon user-profile-avatar">
 						<div className="user-profile-avatar-username" onClick={handleShowUserMenu}>
-							<h5>{loggedUser?.token?.username}</h5>
+							<h5>{decodedToken?.username}</h5>
 						</div>
 						{isVisibleMenu && [
 							<FadeBackground

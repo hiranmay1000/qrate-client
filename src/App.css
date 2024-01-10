@@ -6,7 +6,11 @@
 
 .App {
 	font-family: "Work Sans", "Lato", sans-serif;
-	background-color: #111;
+}
+
+body {
+	transition: 0.3s ease-in-out;
+	margin: 0;
 }
 
 hr {
